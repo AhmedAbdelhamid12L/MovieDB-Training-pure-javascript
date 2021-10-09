@@ -1,0 +1,194 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="imges/spiderman-logo.png" />
+    <title>MovieDB</title>
+  </head>
+  <body>
+    <!-- ****main section **** -->
+    <section id="main">
+      <div class="container">
+        <div class="row justify-content-between p-5">
+          <div class="col-md-5">
+            <input
+              id="searchInAPI"
+              type="text"
+              placeholder="get movies by word..."
+              class="form-control fs-5 bg-transparent text-white border-0 border-bottom"
+            />
+          </div>
+          <div class="col-md-5">
+            <input
+              id="searchInPage"
+              type="text"
+              placeholder="search..."
+              class="form-control fs-5 bg-transparent text-white border-0 border-bottom"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="moviesContainer" class="row"></div>
+      </div>
+    </section>
+    <!-- **** hidden Sidebar section **** -->
+    <section id="hiddenSidebar">
+      <div class="page-links">
+        <div class="space-between">
+          <div class="ps-4">
+            <div class="hidden-effect"></div>
+            <h2 id="linkOne" class="py-3">Now playing</h2>
+            <h2 id="linkTwo" class="py-3">Popular</h2>
+            <h2 id="linkThree" class="py-3">Top Rated</h2>
+            <h2 id="linkFour" class="py-3">Trending</h2>
+            <h2 id="linkFive" class="py-3">Upcoming</h2>
+            <h2 id="linkSix" class="py-3">
+              <a href="#contact">Contact Us</a>
+            </h2>
+          </div>
+          <footer class="pb-3 ps-2">
+            <div class="social-icons">
+              <i class="fab fa-facebook-f px-2"></i>
+              <i class="fab fa-twitter px-2"></i>
+              <i class="fas fa-globe px-2"></i>
+            </div>
+            <p class="py-3">Copyright © 2021 All Rights Reserved.</p>
+          </footer>
+        </div>
+      </div>
+      <div class="action-bar">
+        <div class="space-between">
+          <div class="action-logo pt-4">
+            <img
+              src="imges/logo-actionbar.png"
+              alt="logo-actionbar"
+              class="w-50"
+            />
+          </div>
+          <div class="toggle-btn">
+            <i class="fas fa-bars" id="toggleBtn"></i>
+          </div>
+          <div class="footer-icon pb-4">
+            <i class="fas fa-globe d-block py-2"></i>
+            <i class="fas fa-share-alt d-block py-2"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- **** contact section **** -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-white p-5">ContacUs...</h2>
+        <div>
+          <input
+            id="inputName"
+            type="text"
+            placeholder="Enter Your Name"
+            class="
+              w-75
+              text-white
+              my-4
+              fs-5
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+          <input
+            id="inputEmail"
+            type="email"
+            placeholder="Enter Your Email"
+            class="
+              text-white
+              w-75
+              my-4
+              fs-5
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+          <input
+            id="inputPhone"
+            type="number"
+            placeholder="Enter Your Phone"
+            class="
+              text-white
+              w-75
+              fs-5
+              my-4
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+          <input
+            id="inputAge"
+            type="number"
+            placeholder="Enter Your Age"
+            class="
+              text-white
+              w-75
+              fs-5
+              my-4
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+          <input
+            id="inputPass"
+            type="password"
+            placeholder="Enter Your Password"
+            class="
+              text-white
+              w-75
+              my-4
+              fs-5
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+          <input
+            id="inputRepass"
+            type="password"
+            placeholder="Enter Your Repassword"
+            class="
+              w-75
+              text-white
+              fs-5
+              my-4
+              mx-auto
+              form-control
+              bg-transparent
+              border-0 border-bottom
+            "
+          />
+        </div>
+        <p id="validParag" class="py-4 text-center fs-2 text-danger"></p>
+        <button
+          id="supmitBtn"
+          class="btn btn-outline-danger d-block m-auto my-4 w-25"
+        >
+          Supmit
+        </button>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
