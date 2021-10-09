@@ -56,7 +56,7 @@ export class Validation {
     else if(this.inputRepass.value !== this.inputPass.value) {
       this.validParag.innerHTML = "Please enter the password that you entered previously";
     }
-    else if(this.alreadyExists) {
+    else if(this.alreadyExists() == true) {
       this.alreadyExists();
     }
     else {
@@ -69,13 +69,14 @@ export class Validation {
     
       localStorage.setItem( "userinfo" , strListOne);
     }
-    console.log(this.supmitList);
-    console.log(this.supmitList.length);
+    // console.log(this.supmitList);
+    // console.log(this.supmitList.length);
   }
   alreadyExists() {
     for(let i = 0 ; i < this.supmitList.length ; i++) {
       if(this.supmitList[i].emailValue == this.inputEmail.value) {
         this.validParag.innerHTML = "Sorry email already exists";
+        return true;
       }
     }
   }
