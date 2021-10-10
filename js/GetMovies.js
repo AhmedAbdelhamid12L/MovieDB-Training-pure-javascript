@@ -63,12 +63,17 @@ export class GetMovies {
   searchInPage() {
     this.data = ``;
     for(let i = 0 ; i < this.results.length ; i++ ){
+      if(this.results[i].poster_path == null) {
+        this.newSrc = `imges/244649966_4232205663544220_8405245313951318868_n.jpg`;
+      }else{
+        this.newSrc = `https://image.tmdb.org/t/p/w500${this.results[i].poster_path}`;
+      }
       if(this.results[i].title.includes(this.inputSearchInPage.value) == true) {
         this.data += `  
         <div class="col-md-6 col-lg-4 shadow my-3">
           <div class="movie-card shadow rounded position-relative">
             <div class="poster">
-              <img src="https://image.tmdb.org/t/p/w500${this.results[i].poster_path}" class="img-fluid rounded" />
+              <img src="${this.newSrc}" class="img-fluid rounded" />
               <div class="outer-layer d-flex align-items-center">
                 <div class="movie-info p-0">
                   <h2>${this.results[i].title}</h2>
@@ -88,11 +93,16 @@ export class GetMovies {
   displayMovies() {
     this.data = ``;
     for(let i = 0 ; i < this.results.length ; i++ ){
+      if(this.results[i].poster_path == null) {
+        this.newSrc = `imges/244649966_4232205663544220_8405245313951318868_n.jpg`;
+      }else{
+        this.newSrc = `https://image.tmdb.org/t/p/w500${this.results[i].poster_path}`;
+      }
       this.data += `  
       <div class="col-md-6 col-lg-4 shadow my-3">
         <div class="movie-card shadow rounded position-relative">
           <div class="poster">
-            <img src="https://image.tmdb.org/t/p/w500${this.results[i].poster_path}" class="img-fluid rounded" />
+            <img src="${this.newSrc}" class="img-fluid rounded" />
             <div class="outer-layer d-flex align-items-center">
               <div class="movie-info p-0">
                 <h2>${this.results[i].title}</h2>
